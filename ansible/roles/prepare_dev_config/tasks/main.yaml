@@ -1,0 +1,29 @@
+---
+- name: "create dev user"
+  user:
+    name: "{{ user.username }}"
+    group: "{{ user.group }}"
+    home: "{{ user.home_path}}"
+
+- name: "configure standard editor vim"
+  shell: update-alternatives --set editor /usr/bin/vim.basic
+
+
+- name: "copy development environment templates"
+  template:
+    src: "bashrc"
+    dest: "{{ user.home_path }}/.bashrc" 
+
+- name: "copy development environment templates"
+  template:
+    src: "tmux_conf"
+    dest: "{{ user.home_path }}/.tmux.conf" 
+
+- name: "copy development environment templates"
+  template:
+    src: "vimrc"
+    dest: "/etc/vim/vimrc" 
+
+
+
+

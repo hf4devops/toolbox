@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - prepare_dev_config
