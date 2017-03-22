@@ -1,8 +1,6 @@
 ---
 user:
-  username: hf
-  home_path: /home/hf
+  username: storm
+  home_path: /home/storm
   group: sudo
-
-
 

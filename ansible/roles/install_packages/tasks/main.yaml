@@ -1,0 +1,23 @@
+---
+- name: update ubuntu
+  apt:
+    upgrade: dist
+
+- name: install basic packages for daily use
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - tmux
+    - atop
+    - ssh
+    - vim
+    - tree
+    - curl
+    - ack-grep
+    - git
+    - python3
+    - python3-pip
+    - redshift
+    - redshift-gtk
+  
