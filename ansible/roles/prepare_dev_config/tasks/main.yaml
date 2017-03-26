@@ -9,15 +9,20 @@
 - name: "configure standard editor vim"
   shell: update-alternatives --set editor /usr/bin/vim.basic
 
-- name: "copy development environment templates"
+- name: "copy users bashrc"
   template:
     src: "bashrc"
     dest: "{{ user.home_path }}/.bashrc" 
 
-- name: "copy development environment templates"
+- name: "copy tmux conf"
   template:
     src: "tmux_conf"
     dest: "{{ user.home_path }}/.tmux.conf" 
+
+- name: "copy users bashrc"
+  template:
+    src: "profile"
+    dest: "{{ user.home_path }}/.profile" 
 
 - name: "copy development environment templates"
   template:

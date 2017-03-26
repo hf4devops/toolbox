@@ -1,0 +1,26 @@
+---
+- name: Fetch Skype for Linux
+  get_url:
+    url: https://repo.skype.com/latest/skypeforlinux-64.deb
+    dest: /tmp/skypeforlinux-64.deb
+
+- name: Install Skype for Linux
+  apt:
+    deb: /tmp/skypeforlinux-64.deb
+
+# Does not work due to Dconf issue, run the script manually 
+#- name: Add Skype to Unity Launcher
+#  shell: roles/install_skype/scripts/set_unity_launcher.sh
+#  become: yes 
+#  become_user: "{{ user.username }}"
+
+- name: cleanup installation
+  file:
+    path: /tmp/skypeforlinux-64.deb
+    state: absent
+
+
+# Does not work like in http://docs.ansible.com/ansible/apt_module.html ?
+#- name: Fetch and install Skype for Linux
+#  apt:
+#    deb: https://repo.skype.com/latest/skypeforlinux-64.deb 

@@ -1,0 +1,1 @@
+gsettings set com.canonical.Unity.Launcher favorites "['application://gnome-terminal.desktop', 'unity://running-apps', 'application://thunderbird.desktop', 'application://org.gnome.Nautilus.desktop', 'application://firefox.desktop', 'application://unity-control-center.desktop', 'unity://devices', 'application://skypeforlinux.desktop']"

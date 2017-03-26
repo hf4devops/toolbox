@@ -1,5 +1,5 @@
 ---
 - hosts: all
   roles:
-    - prepare_dev_config
     - install_packages
+#    - install_skype

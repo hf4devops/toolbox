@@ -20,4 +20,22 @@
     - python3-pip
     - redshift
     - redshift-gtk
+    - compizconfig-settings-manager
+    - compiz-plugins
+    - p7zip-full
+
+- name: Clone Tmux plugins
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: "{{ user.home_path }}/.tmux/plugins/tpm"
+  become: true
+  become_user: "{{ user.username }}"
   
+
+- name: Clone Tmux ressurect
+  git:
+    repo: https://github.com/tmux-plugins/tmux-resurrect
+    dest: "{{ user.home_path }}/.tmux/plugins/resurrect"
+  become: true
+  become_user: "{{ user.username }}"
+

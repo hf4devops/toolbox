@@ -91,13 +91,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#    . /etc/bash_completion
-#fi
-STSIZE=""
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+HISTSIZE=""
 HISTFILESIZE=""
 HISTTIMEFORMAT="%d/%m/%y %T "
 #source <(kubectl completion bash)
@@ -106,16 +104,18 @@ alias gits="git status"
 alias gitc="git pull origin;git commit"
 alias gitp="git push origin master"
 
-alias vimssh="vim $HOME/development/toolbox/scripts/templates/.ssh/config"
+alias vimvim="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/vimrc"
+alias vimbash="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/bashrc"
+alias vimtmux="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/tmux_conf"
 
 if command -v redshift-gtk>/dev/null; then
-  if [ -z $REDSHIFT ]; then 
+  if [ ! -f /tmp/.redshift.run ]; then
     redshift-gtk &>/dev/null &
-    export REDSHIFT=true
+  export REDSHIFT=true
+	touch /tmp/.redshift.run
   fi
 fi
 
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
-
