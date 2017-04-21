@@ -47,7 +47,7 @@
     groups: libvirtd,kvm
     state: present
 
-- name: create tmux directiory
+- name: create tmux directory
   file:
     path: "{{ user.home_path }}/.tmux"
     state: directory
