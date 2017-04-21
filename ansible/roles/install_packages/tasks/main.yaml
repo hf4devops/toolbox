@@ -44,7 +44,7 @@
 - name: Add user to libvirt and kvm
   user:
     name: "{{ user.username }}"
-    groups: libvirtd,kvm
+    groups: sudo,libvirtd,kvm
     state: present
 
 - name: create tmux directory
@@ -52,7 +52,6 @@
     path: "{{ user.home_path }}/.tmux"
     state: directory
     owner: "{{ user.username }}"
-    group: "{{ user.username }}"
 
 - name: Clone Tmux plugins
   git:
