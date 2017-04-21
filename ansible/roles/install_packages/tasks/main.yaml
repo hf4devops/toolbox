@@ -1,14 +1,4 @@
 ---
-- name: add pycharm repo to deb list
-  apt_repository:
-    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
-    state: present
-
-- name: add keyring for pycharm repo
-  apt_key:
-    url: http://archive.getdeb.net/getdeb-archive.key
-    state: present
-
 - name: update ubuntu
   apt:
     upgrade: dist
@@ -17,6 +7,7 @@
   apt:
     name: "{{ item }}"
     state: latest
+    force: yes
   with_items:
     - tmux
     - atop
@@ -39,14 +30,36 @@
     - bridge-utils
     - virt-manager
     - keepassx
-    - pycharm
     - sysstat
+    - clamav
 
-- name: Add user to libvirt and kvm
+- name: add user to libvirt and kvm
   user:
     name: "{{ user.username }}"
     groups: sudo,libvirtd,kvm
     state: present
+
+- name: add pycharm repo to deb list
+  apt_repository:
+    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
+    state: present 
+
+- name: add keyring for pycharm repo
+  apt_key:
+    url: http://archive.getdeb.net/getdeb-archive.key
+    state: present
+
+- name: install basic packages for daily use
+  apt:
+    name: pycharm
+    state: latest
+    force: yes
+    update_cache: yes
+
+- name: remove pycharm repo to deb list due to bugs in KVM virt-manager
+  apt_repository:
+    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
+    state: absent 
 
 - name: create tmux directory
   file:
@@ -54,14 +67,14 @@
     state: directory
     owner: "{{ user.username }}"
 
-- name: Clone Tmux plugins
+- name: clone Tmux plugins
   git:
     repo: https://github.com/tmux-plugins/tpm
     dest: "{{ user.home_path }}/.tmux/plugins/tpm"
   become: true
   become_user: "{{ user.username }}"
 
-- name: Clone Tmux ressurect
+- name: clone Tmux ressurect
   git:
     repo: https://github.com/tmux-plugins/tmux-resurrect
     dest: "{{ user.home_path }}/.tmux/plugins/resurrect"
