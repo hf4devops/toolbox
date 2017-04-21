@@ -24,8 +24,12 @@
     src: "profile"
     dest: "{{ user.home_path }}/.profile" 
 
-- name: "copy development environment templates"
+- name: "copy vimrc"
   template:
     src: "vimrc"
     dest: "/etc/vim/vimrc" 
 
+- name: "copy users bash_logout"
+  template:
+    src: "bash_logout"
+    dest: "{{ user.home_path }}/.bash_logout" 

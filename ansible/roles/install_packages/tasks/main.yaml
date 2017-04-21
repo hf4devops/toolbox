@@ -1,4 +1,14 @@
 ---
+- name: add pycharm repo to deb list
+  apt_repository:
+    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
+    state: present
+
+- name: add keyring for pycharm repo
+  apt_key:
+    url: http://archive.getdeb.net/getdeb-archive.key
+    state: present
+
 - name: update ubuntu
   apt:
     upgrade: dist
@@ -23,14 +33,24 @@
     - compizconfig-settings-manager
     - compiz-plugins
     - p7zip-full
+    - qemu-kvm
+    - libvirt-bin 
+    - ubuntu-vm-builder
+    - bridge-utils
+    - keepassx
+    - pycharm
+
+- name: Add user to libvirt and kvm
+  user:
+    name: "{{ user.username }}"
+    groups: libvirtd,kvm
+    state: present
 
 - name: Clone Tmux plugins
   git:
     repo: https://github.com/tmux-plugins/tpm
     dest: "{{ user.home_path }}/.tmux/plugins/tpm"
   become: true
-  become_user: "{{ user.username }}"
-  
 
 - name: Clone Tmux ressurect
   git:
