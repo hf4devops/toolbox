@@ -54,16 +54,6 @@
     owner: "{{ user.username }}"
     group: "{{ user.username }}"
 
-- name: create tmux directiories
-  file:
-    path: "{{ user.home_path }}/.tmux/{{ item }}"
-    state: directory
-    owner: "{{ user.username }}"
-    group: "{{ user.username }}"
-  with_items:
-    - tpm
-    - resurrect
-
 - name: Clone Tmux plugins
   git:
     repo: https://github.com/tmux-plugins/tpm
