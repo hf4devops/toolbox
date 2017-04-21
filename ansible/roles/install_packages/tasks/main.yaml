@@ -39,6 +39,7 @@
     - bridge-utils
     - keepassx
     - pycharm
+    - sysstat
 
 - name: Add user to libvirt and kvm
   user:
@@ -46,11 +47,29 @@
     groups: libvirtd,kvm
     state: present
 
+- name: create tmux directiory
+  file:
+    path: "{{ user.home_path }}/.tmux"
+    state: directory
+    owner: "{{ user.username }}"
+    group: "{{ user.username }}"
+
+- name: create tmux directiories
+  file:
+    path: "{{ user.home_path }}/.tmux/{{ item }}"
+    state: directory
+    owner: "{{ user.username }}"
+    group: "{{ user.username }}"
+  with_items:
+    - tpm
+    - resurrect
+
 - name: Clone Tmux plugins
   git:
     repo: https://github.com/tmux-plugins/tpm
     dest: "{{ user.home_path }}/.tmux/plugins/tpm"
   become: true
+  become_user: "{{ user.username }}"
 
 - name: Clone Tmux ressurect
   git:
