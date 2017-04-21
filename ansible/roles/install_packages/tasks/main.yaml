@@ -37,6 +37,7 @@
     - libvirt-bin 
     - ubuntu-vm-builder
     - bridge-utils
+    - virt-manager
     - keepassx
     - pycharm
     - sysstat
