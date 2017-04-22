@@ -1,4 +1,9 @@
 ---
+- name: add ansible repo
+  apt_repository:
+    repo: "ppa:ansible/ansible"
+    state: present 
+
 - name: update ubuntu
   apt:
     upgrade: dist
@@ -7,7 +12,6 @@
   apt:
     name: "{{ item }}"
     state: latest
-    force: yes
   with_items:
     - tmux
     - atop
@@ -53,7 +57,7 @@
     url: http://archive.getdeb.net/getdeb-archive.key
     state: present
 
-- name: install basic packages for daily use
+- name: install pycharm
   apt:
     name: pycharm
     state: latest
