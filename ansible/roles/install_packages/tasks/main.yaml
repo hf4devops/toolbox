@@ -4,6 +4,16 @@
     repo: "ppa:ansible/ansible"
     state: present 
 
+- name: add postgresql repo
+  apt_repository:
+    repo: deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+    state: present
+
+- name: add postgres repo key
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
 - name: update ubuntu
   apt:
     upgrade: dist
@@ -12,6 +22,7 @@
   apt:
     name: "{{ item }}"
     state: latest
+    update_cache: yes
   with_items:
     - tmux
     - atop
@@ -40,6 +51,7 @@
 #    - tcptrack
 #    - vnstat
     - apache2-utils
+    - postgresql-9.6
 
 - name: add user to libvirt and kvm
   user:
