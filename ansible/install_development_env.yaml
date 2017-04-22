@@ -2,5 +2,6 @@
 - hosts: all
   roles:
     - install_packages
-#    - install_skype
+    - install_skype
+    - redshift
     - prepare_dev_config

@@ -19,8 +19,6 @@
     - git
     - python3
     - python3-pip
-    - redshift
-    - redshift-gtk
     - compizconfig-settings-manager
     - compiz-plugins
     - p7zip-full
@@ -32,6 +30,12 @@
     - keepassx
     - sysstat
     - clamav
+    - iftop
+    - bmon
+#    - slurm
+#    - tcptrack
+#    - vnstat
+    - apache2-utils
 
 - name: add user to libvirt and kvm
   user:

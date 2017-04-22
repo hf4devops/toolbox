@@ -1,0 +1,32 @@
+---
+- name: install redshift from repo
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - redshift
+    - redshift-gtk
+
+- name: create redshift systemd module
+  template:
+    src: redshift.j2
+    dest: /etc/systemd/system/redshift.service
+    owner: root
+    group: root
+    mode: 655
+
+- name: create redshift startup script
+  template:
+    src: start_redshift.j2
+    dest: /usr/local/bin/start_redshift
+    owner: root
+    group: root
+    mode: 655
+
+- name: enable redshift in systemd
+  systemd:
+    name: redshift.service
+    enabled: yes
+    daemon_reload: yes
+    state: restarted
+
