@@ -1,1 +1,13 @@
-gsettings set com.canonical.Unity.Launcher favorites "['application://gnome-terminal.desktop', 'unity://running-apps', 'application://thunderbird.desktop', 'application://org.gnome.Nautilus.desktop', 'application://firefox.desktop', 'application://unity-control-center.desktop', 'unity://devices', 'application://skypeforlinux.desktop']"
+#!/bin/bash
+
+add_to_taskbar=$1
+
+if [ "$add_to_taskbar" != "" ]
+then
+
+  new_app=$(gsettings get com.canonical.Unity.Launcher favorites | sed "s~]~, 'application://${add_to_taskbar}.desktop']~")
+
+  gsettings set com.canonical.Unity.Launcher favorites "$new_app"
+
+
+fi
