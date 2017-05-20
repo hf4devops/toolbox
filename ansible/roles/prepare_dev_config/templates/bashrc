@@ -108,6 +108,18 @@ alias gitp="git push origin master"
 alias vimvim="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/vimrc"
 alias vimbash="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/bashrc"
 alias vimtmux="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/tmux_conf"
+alias spread="cd ~/development/toolbox/ansible/ && sudo ansible-playbook -i inventory/local spread_configurations.yaml && cd -"
+
+
+# disable ctrl+s
+stty -ixon
+
+case "$TERM" in
+    screen*)
+        PROMPT_COMMAND="printf '\033k$(hostname)\033\\';"${PROMPT_COMMAND}
+        ;;
+esac
+
 
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux

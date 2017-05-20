@@ -47,9 +47,6 @@
     - clamav
     - iftop
     - bmon
-#    - slurm
-#    - tcptrack
-#    - vnstat
     - apache2-utils
     - postgresql-9.6
 
