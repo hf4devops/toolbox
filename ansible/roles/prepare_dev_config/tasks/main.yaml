@@ -1,14 +1,4 @@
 ---
-#- name: "create dev user"
-#  user:
-#    name: "{{ user.username }}"
-#    group: "{{ user.group }}"
-#    home: "{{ user.home_path}}"
-#    state: present
-
-- name: "configure standard editor vim"
-  shell: update-alternatives --set editor /usr/bin/vim.basic
-
 - name: "copy users bashrc"
   template:
     src: "bashrc"
@@ -17,7 +7,7 @@
 - name: "copy tmux conf"
   template:
     src: "tmux_conf"
-    dest: "{{ user.home_path }}/.tmux.conf" 
+    dest: "{{ path.tmux.config }}"
 
 - name: "copy users bashrc"
   template:
@@ -26,8 +16,8 @@
 
 - name: "copy vimrc"
   template:
-    src: "vimrc"
-    dest: "/etc/vim/vimrc" 
+    src: "vimrc.j2"
+    dest: "{{ path.vim.config }}"
 
 - name: "copy users bash_logout"
   template:

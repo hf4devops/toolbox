@@ -1,0 +1,26 @@
+---
+
+- name: install tmux
+  apt:
+    name: "tmux"
+    state: present
+
+- name: create tmux directory
+  file:
+    path: "{{ user.home_path }}/.tmux"
+    state: directory
+    owner: "{{ user.username }}"
+
+- name: clone Tmux plugins
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: "{{ user.home_path }}/.tmux/plugins/tpm"
+  become: true
+  become_user: "{{ user.username }}"
+
+- name: clone Tmux ressurect
+  git:
+    repo: https://github.com/tmux-plugins/tmux-resurrect
+    dest: "{{ user.home_path }}/.tmux/plugins/resurrect"
+  become: true
+  become_user: "{{ user.username }}"

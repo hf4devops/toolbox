@@ -1,0 +1,47 @@
+runtime! debian.vim
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+set rtp+={{ path.vim.vundle }}
+
+" Vundle
+set nocompatible
+filetype off
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Airline
+Plugin 'file:///home/hf/.vim/bundle/vim-airline'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+set laststatus=2
+
+syntax on
+set showmatch
+set ignorecase
+set incsearch
+set encoding=utf8
+set wildmenu
+set autoread
+set hlsearch
+set smartcase
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set pastetoggle=<F9>
+set number
+set relativenumber
+set incsearch
+set autoindent
+let python_highlight_all = 1
+colo ron
+set backspace=indent,eol,start
+
+set splitbelow
+set splitright
+
+command -nargs=? -bang Buffer if <q-args> != '' | exe 'buffer '.<q-args> | else | ls<bang> | let buffer_nn=input('Which one: ') | if buffer_nn != '' | exe buffer_nn != 0 ? 'buffer '.buffer_nn : 'enew' | endif | endif
+
+

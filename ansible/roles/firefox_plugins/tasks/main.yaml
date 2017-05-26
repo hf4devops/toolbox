@@ -1,0 +1,5 @@
+---
+
+- name: install for firefox
+  shell: firefox https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/addon-607454-latest.xpi?src=dp-btn-primary
+

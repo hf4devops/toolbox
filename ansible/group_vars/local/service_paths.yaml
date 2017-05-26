@@ -1,0 +1,9 @@
+---
+path:
+  vim:
+    config: "/etc/vim/vimrc"
+    bundle: "{{ user.home_path }}/.vim/bundle"
+    vundle: "{{ user.home_path }}/.vim/bundle/Vundle.vim"
+    airline: "{{ user.home_path }}/.vim/bundle/vim-airline"
+  tmux:
+    config: "{{ user.home_path }}/.tmux.conf"

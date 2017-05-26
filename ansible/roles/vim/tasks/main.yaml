@@ -1,0 +1,31 @@
+---
+- name: check vim
+  apt:
+    name: "vim"
+    state: present
+    
+- name: create vim directory
+  file:
+    path: "{{ path.vim.bundle }}"
+    state: directory
+    owner: "{{ user.username }}"
+    group: "{{ user.group }}"
+
+- name: get vim-vundle
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim
+    dest: "{{ path.vim.vundle }}"
+
+- name: get vim-airline
+  git:
+    repo: https://github.com/vim-airline/vim-airline
+    dest: "{{ path.vim.airline }}"
+
+- name: install vim plugins
+  shell: "vim +PluginInstall +qall"
+  become: true
+  become_user: "{{ user.username }}"
+
+- name: "configure standard editor vim"
+  shell: update-alternatives --set editor /usr/bin/vim.basic
+   
