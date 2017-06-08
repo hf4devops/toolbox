@@ -1,18 +1,13 @@
 ---
-- name: add ansible repo
-  apt_repository:
-    repo: "ppa:ansible/ansible"
-    state: present 
-
-- name: add postgresql repo
-  apt_repository:
-    repo: deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
-    state: present
-
-- name: add postgres repo key
-  apt_key:
-    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
-    state: present
+#- name: add postgresql repo
+#  apt_repository:
+#    repo: deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+#    state: present
+#
+#- name: add postgres repo key
+#  apt_key:
+#    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+#    state: present
 
 - name: update ubuntu
   apt:
@@ -22,7 +17,6 @@
   apt:
     name: "{{ item }}"
     state: latest
-    update_cache: yes
   with_items:
     - tmux
     - atop
@@ -34,67 +28,12 @@
     - git
     - python3
     - python3-pip
-    - compizconfig-settings-manager
-    - compiz-plugins
     - p7zip-full
-    - qemu-kvm
-    - libvirt-bin 
-    - ubuntu-vm-builder
-    - bridge-utils
-    - virt-manager
     - keepassx
     - sysstat
-    - clamav
+#    - clamav
     - iftop
-    - bmon
-    - apache2-utils
-    - postgresql-9.6
-
-- name: add user to libvirt and kvm
-  user:
-    name: "{{ user.username }}"
-    groups: sudo,libvirtd,kvm
-    state: present
-
-- name: add pycharm repo to deb list
-  apt_repository:
-    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
-    state: present 
-
-- name: add keyring for pycharm repo
-  apt_key:
-    url: http://archive.getdeb.net/getdeb-archive.key
-    state: present
-
-- name: install pycharm
-  apt:
-    name: pycharm
-    state: latest
-    force: yes
-    update_cache: yes
-
-- name: remove pycharm repo to deb list due to bugs in KVM virt-manager
-  apt_repository:
-    repo: deb http://archive.getdeb.net/ubuntu yakkety-getdeb apps
-    state: absent 
-
-- name: create tmux directory
-  file:
-    path: "{{ user.home_path }}/.tmux"
-    state: directory
-    owner: "{{ user.username }}"
-
-- name: clone Tmux plugins
-  git:
-    repo: https://github.com/tmux-plugins/tpm
-    dest: "{{ user.home_path }}/.tmux/plugins/tpm"
-  become: true
-  become_user: "{{ user.username }}"
-
-- name: clone Tmux ressurect
-  git:
-    repo: https://github.com/tmux-plugins/tmux-resurrect
-    dest: "{{ user.home_path }}/.tmux/plugins/resurrect"
-  become: true
-  become_user: "{{ user.username }}"
-
+#    - bmon
+#    - apache2-utils
+#    - postgresql-9.6
+     - lm-sensors

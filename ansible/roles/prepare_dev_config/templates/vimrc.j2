@@ -12,10 +12,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Airline
 Plugin 'file:///home/hf/.vim/bundle/vim-airline'
 
+call vundle#end()
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-set laststatus=2
 
 syntax on
 set showmatch
@@ -36,9 +36,8 @@ set relativenumber
 set incsearch
 set autoindent
 let python_highlight_all = 1
-colo ron
 set backspace=indent,eol,start
-
+set laststatus=2
 set splitbelow
 set splitright
 

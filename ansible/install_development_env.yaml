@@ -3,5 +3,9 @@
   roles:
     - install_packages
     - install_skype
-    - redshift
+    - tmux
+    - vim
+    - pycharm
     - prepare_dev_config
+    - disable_bluetooth
+    - firefox_plugins
