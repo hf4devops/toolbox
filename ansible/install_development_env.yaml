@@ -5,7 +5,8 @@
     - install_skype
     - tmux
     - vim
-    - pycharm
+    - install_sublime
+      #    - pycharm
     - prepare_dev_config
     - disable_bluetooth
     - firefox_plugins
