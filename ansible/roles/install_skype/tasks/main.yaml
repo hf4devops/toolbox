@@ -5,7 +5,7 @@
     dest: /tmp/skypeforlinux-64.deb
 
 - name: get keys for skype
-    shell: "curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -"
+  shell: "curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -"
 
 - name: Install Skype for Linux
   apt:
@@ -21,8 +21,8 @@
     path: /tmp/skypeforlinux-64.deb
     state: absent
 
--name: cleanup installation 2/3
-    shell: add-apt-repository --remove skype-stable
+- name: cleanup installation 2/3
+  shell: add-apt-repository --remove skype-stable
 
 - name: cleanup installation 3/3
   file: 

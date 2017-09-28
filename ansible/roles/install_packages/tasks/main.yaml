@@ -36,4 +36,4 @@
 #    - bmon
 #    - apache2-utils
 #    - postgresql-9.6
-     - lm-sensors
+    - lm-sensors
