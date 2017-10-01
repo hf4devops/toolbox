@@ -1,6 +1,7 @@
 ---
 - hosts: all
   roles:
+    - disable_bluetooth
     - install_packages
     - install_skype
     - tmux
@@ -8,5 +9,4 @@
     - install_sublime
       #    - pycharm
     - prepare_dev_config
-    - disable_bluetooth
     - firefox_plugins

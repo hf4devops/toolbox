@@ -1,16 +1,5 @@
 ---
 
-- name: Add Sublime gpg key
-  apt_key:
-    url: https://download.sublimetext.com/sublimehq-pub.gpg
-    state: present
-
-- name: Add Sublime repository
-  apt_repository:
-    repo: deb https://download.sublimetext.com/ apt/stable/
-    state: present
-
-- name: Update repos
-  apt:
-    name: sublime-text
-    update_cache: yes
+- include: install_sublime_base.yaml
+- include: install_sublime_packages.yaml
+- include: configure_sublime.yaml
