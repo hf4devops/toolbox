@@ -7,8 +7,7 @@
     mode: '0755'
 
 - name: Modifiy gnome Desktop favorites
-  shell: ""
+  shell: "/usr/local/bin/set_gnome_favorites.sh"
   register: gnome_favorities
   failed_when: gnome_favorities.rc != 0
   become: "{{ user.username }}"
-

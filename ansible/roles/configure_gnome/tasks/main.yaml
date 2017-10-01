@@ -1,3 +1,4 @@
 ---
   
 - include: gnome_favorites.yaml
+- include: gnome_dconf.yaml
