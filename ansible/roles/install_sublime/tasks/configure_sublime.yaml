@@ -8,7 +8,7 @@
 
 - name: Change owner of template
   file:
-    path: "{{ sublime_config_path }}"
+    path: "{{ sublime_path }}"
     owner: "{{ user.username }}"
     group: "{{ user.group }}"
     recurse: yes
