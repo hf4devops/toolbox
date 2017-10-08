@@ -2,5 +2,5 @@
 user:
   username: hf
   home_path: /home/hf
-  group: sudo
+  group: hf
 
