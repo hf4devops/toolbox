@@ -1,4 +1,20 @@
 ---
-  
-- include_tasks: gnome_favorites.yaml
-- include_tasks: gnome_dconf.yaml
+
+- name: Create gnome Desktop favorites template
+  template:
+    src: gnome_favorites.sh.j2
+    dest: /usr/local/bin/set_gnome_favorites.sh
+    mode: '0755'
+
+# Same old issue, that I cannot get Dconf running via sudo or ansible. Executing the script with the correct user works fine.
+
+#- name: Modifiy gnome Desktop favorites
+#  shell: "sudo su - {{ user.username }};/usr/local/bin/set_gnome_favorites.sh"
+#  register: gnome_favorities
+#  failed_when: gnome_favorities.rc != 0
+#  become: "{{ user.username }}"
+
+#- name: Set dconf mouse click on hover
+#  shell: "gsettings set org.gnome.desktop.wm.preferences focus-mode mouse"
+#  register: dconf_set
+#  failed_when: dconf_set.rc != 0
