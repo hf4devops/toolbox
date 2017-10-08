@@ -1,5 +1,5 @@
 ---
 
-- include: install_sublime_base.yaml
-- include: install_sublime_packages.yaml
-- include: configure_sublime.yaml
+- include_tasks: install_sublime_base.yaml
+- include_tasks: install_sublime_packages.yaml
+- include_tasks: configure_sublime.yaml

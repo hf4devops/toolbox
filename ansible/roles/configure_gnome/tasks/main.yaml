@@ -1,4 +1,4 @@
 ---
   
-- include: gnome_favorites.yaml
-- include: gnome_dconf.yaml
+- include_tasks: gnome_favorites.yaml
+- include_tasks: gnome_dconf.yaml

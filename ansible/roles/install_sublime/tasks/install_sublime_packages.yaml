@@ -11,3 +11,9 @@
     src: Control.sublime-settings.j2
     dest: "{{ sublime_packages_control_path }}.sublime-settings"
     mode: '0666'
+
+- name: Change owner of templates and packages
+  file:
+    path: "{{ sublime_package_path }}"
+    owner: "{{ user.username }}"
+    group: "{{ user.group }}"
