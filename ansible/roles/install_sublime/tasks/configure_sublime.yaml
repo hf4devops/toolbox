@@ -4,7 +4,13 @@
   template:
     src: Preferences.sublime-settings.j2
     dest: "{{ sublime_config_path }}"
-    mode: '0644'
+    mode: '0777'
+
+- name: Create Sublime key setting file
+  template:
+    src: sublime-keymap.j2
+    dest: "{{ sublime_path }}/Packages/User/Default (Linux).sublime-keymap"
+    mode: '0777'
 
 - name: Change owner of template
   file:
