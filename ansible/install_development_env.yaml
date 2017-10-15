@@ -1,13 +1,14 @@
 ---
 - hosts: all
   roles:
-    - disable_bluetooth
-    - install_packages
-    - install_skype
-    - tmux
-    - vim
-    - install_sublime
-      #    - pycharm
-    - prepare_dev_config
-    - firefox_plugins
-    - configure_gnome
+    # - disable_bluetooth
+    # - install_packages
+    # - install_skype
+    # - tmux
+    # - vim
+    # - install_sublime
+    #   #    - pycharm
+    # - prepare_dev_config
+    # - firefox_plugins
+    # - configure_gnome
+    - docker_ce
