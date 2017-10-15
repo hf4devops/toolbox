@@ -1,0 +1,6 @@
+---
+- name: get key from MSDM table
+  shell: hexdump -s 56 -e '/29 "%s\n"' /sys/firmware/acpi/tables/MSDM
+  register: msdn_key
+
+
