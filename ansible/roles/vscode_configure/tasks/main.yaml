@@ -1,0 +1,22 @@
+- name: Copy template settings 
+  template:
+    src: settings.json
+    dest: "{{ user.home_path }}/.config/Code/User/settings.json"
+  become: "{{ user.username }}"
+
+- name: Copy template keybindings
+  template:
+    src: keybindings.json
+    dest: "{{ user.home_path }}/.config/Code/User/keybindings.json"
+  become_user: "{{ user.username }}"
+  become: yes
+
+- name: Install extensions to VScode
+  shell: "/usr/bin/code --install-extension {{ item }} --user-data-dir {{ user.home_path }}/.config/Code"
+  with_items:
+    - "emmanuelbeziat.vscode-great-icons"
+    - "haaaad.ansible"
+    - "timonwong.ansible-autocomplete"
+    - "vscodevim.vim"
+  become_user: "{{ user.username }}"
+  become: yes
