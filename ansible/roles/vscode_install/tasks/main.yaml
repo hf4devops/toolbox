@@ -12,12 +12,10 @@
   apt:
     deb: "/tmp/vscode.deb"
     state: installed
-  become_user: "{{ user.username }}"
+  become_user: root
   become: yes
 
 - name: Cleanup installation package
   file:
     path: "/tmp/vscode.deb"
     state: absent
-
-

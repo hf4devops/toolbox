@@ -11,7 +11,9 @@ sudo apt install ansible git vim
 
 git config user.name "$user"
 git config user.email "example@mail.com"
-set-url origin git@github.com:$user/toolbox
+git set-url origin git@github.com:$user/toolbox
+
+cd ansible
 
 sudo ansible-playbook -i inventory/hf install_development_env.yaml
 ansible_exitcode=$?
