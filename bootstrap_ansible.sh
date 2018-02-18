@@ -11,7 +11,7 @@ sudo apt install ansible git vim
 
 git config user.name "$user"
 git config user.email "example@mail.com"
-git set-url origin git@github.com:$user/toolbox
+git remote set-url origin git@github.com:$user/toolbox
 
 cd ansible
 
