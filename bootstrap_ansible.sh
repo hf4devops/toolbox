@@ -2,7 +2,7 @@
 
 # This script is not robust or good, just a hack. Future script will do better
 
-git_user="hf4devops"
+git_user="hf"
 git_email="no-reply"
 system_user="hf"
 ansible_exitcode=0
