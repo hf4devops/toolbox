@@ -1,15 +1,9 @@
 #!/bin/bash
 
-# This script is not robust or good, just a hack. Future script will do better
-
-git_user="hf"
-git_email="no-reply"
+git_user="hf4devops"
+git_email="changeme@example.com"
 system_user="hf"
 ansible_exitcode=0
-
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt update
-sudo apt install ansible git vim
 
 git config user.name "$git_user"
 git config user.email "$git_email"
