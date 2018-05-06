@@ -13,8 +13,3 @@
 #  register: gnome_favorities
 #  failed_when: gnome_favorities.rc != 0
 #  become: "{{ user.username }}"
-
-#- name: Set dconf mouse click on hover
-#  shell: "gsettings set org.gnome.desktop.wm.preferences focus-mode mouse"
-#  register: dconf_set
-#  failed_when: dconf_set.rc != 0

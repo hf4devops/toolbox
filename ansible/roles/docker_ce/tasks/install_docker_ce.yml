@@ -9,13 +9,14 @@
     - "curl"
     - "software-properties-common"
 
-- name: Get Docker GPG key
-  shell: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
-
-- name: Set docker in apt repository for stable
-  shell: 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
+      #- name: Get Docker GPG key
+      #  shell: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
+      #  warn=False
+      #
+      #- name: Set docker in apt repository for stable
+      #  shell: 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
 
 - name: Install Docker CE
   apt:
-    name: docker-ce
+    name: docker.io
     update_cache: yes

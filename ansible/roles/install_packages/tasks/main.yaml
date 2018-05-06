@@ -1,13 +1,4 @@
 ---
-#- name: add postgresql repo
-#  apt_repository:
-#    repo: deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
-#    state: present
-#
-#- name: add postgres repo key
-#  apt_key:
-#    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
-#    state: present
 
 - name: update ubuntu
   apt:
@@ -24,16 +15,11 @@
     - vim
     - tree
     - curl
-    - ack-grep
     - git
     - python3
     - python3-pip
     - p7zip-full
     - keepassx
     - sysstat
-#    - clamav
     - iftop
-#    - bmon
-#    - apache2-utils
-#    - postgresql-9.6
     - lm-sensors

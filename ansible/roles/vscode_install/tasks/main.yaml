@@ -11,7 +11,7 @@
 - name: Install Microsoft VSCode
   apt:
     deb: "/tmp/vscode.deb"
-    state: installed
+    state: latest
   become_user: root
   become: yes
 

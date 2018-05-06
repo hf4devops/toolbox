@@ -4,4 +4,4 @@ dconf write /org/gnome/shell/favorite-apps "[{% for favorit in gnome_desktop_fav
 '{{ favorit }}'{% if loop.index != gnome_desktop_favorites|length 
 %}, {% endif %}{% endfor %}]"
 
-gsettings set org.gnome.desktop.wm.preferences focus-mode mouse
+# gsettings set org.gnome.desktop.wm.preferences focus-mode mouse
