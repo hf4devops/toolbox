@@ -1,1 +1,86 @@
-/home/hf/.config/Code/User/keybindings.json
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+    "key": "ctrl+y",
+    "command": "workbench.action.terminal.focusAtIndex1"
+    },
+    {
+    "key": "ctrl+y",
+    "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+    "key": "ctrl+shift+[Equal]",
+    "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen"
+    },
+    {
+    "key": "alt+w",
+    "command": "workbench.action.closePanel"
+    },
+    {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.splitEditor"
+    },
+    {
+    "command": "deleteAllRight",
+    "key": "ctrl+d",
+    "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+    "key": "alt+left",
+    "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+    "key": "ctrl+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+    "key": "alt+right",
+    "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+    "key": "ctrl+j ctrl+j",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+    "key": "ctrl+k left",
+    "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+    "key": "ctrl+k ctrl+k",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+    "key": "ctrl+k right",
+    "command": "-workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+    "key": "shift+alt+right",
+    "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+    "key": "ctrl+alt+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+    "key": "shift+alt+left",
+    "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+    "key": "ctrl+alt+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+    "key": "ctrl+shift+d ctrl+shift+d",
+    "command": "list.focusPageDown",
+    "when": "listFocus"
+    },
+    ]

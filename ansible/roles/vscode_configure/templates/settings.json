@@ -1,1 +1,8 @@
-/home/hf/.config/Code/User/settings.json
+{
+  "window.zoomLevel": 1,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false
+}

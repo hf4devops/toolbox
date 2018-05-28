@@ -15,8 +15,5 @@
   shell: "/usr/bin/code --install-extension {{ item }} --user-data-dir {{ user.home_path }}/.config/Code"
   with_items:
     - "emmanuelbeziat.vscode-great-icons"
-    - "haaaad.ansible"
-    - "timonwong.ansible-autocomplete"
-    - "vscodevim.vim"
   become_user: "{{ user.username }}"
   become: yes
