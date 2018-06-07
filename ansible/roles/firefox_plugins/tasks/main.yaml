@@ -1,5 +1,7 @@
 ---
 
+# TODO Make idepotent
+
 # - name: Close all Firefox instances
   # shell: "killall firefox"
 

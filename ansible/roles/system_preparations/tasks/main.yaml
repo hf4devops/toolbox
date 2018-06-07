@@ -1,0 +1,9 @@
+---
+
+# Could not get it running in rc files because of the timing. Even in Cron I need a sleep
+- name: Change GPU power profile at boot because of 4k100hz to high
+  cron:
+    name: 4k100hz_power_setting
+    special_time: reboot
+    job: "sleep 3; echo "high" > /sys/class/drm/card0/device/power_dpm_force_performance_level"
+    user: root
