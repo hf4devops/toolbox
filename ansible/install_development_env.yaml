@@ -4,11 +4,10 @@
     - disable_bluetooth
     - install_packages
     - install_chrome
-    - firefox_plugins
     - tmux
     - vim
     - prepare_dev_config
     - configure_gnome
     - docker_ce
     - vscode_install
-#    - vscode_configure
+    - vscode_configure

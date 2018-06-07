@@ -1,9 +1,16 @@
 ---
 
-- name: Install Ublock for Firefox
+# - name: Close all Firefox instances
+  # shell: "killall firefox"
+
+- name: Install Ublock for Firefox, please click into the browser to add and close afterwards !
   shell: firefox https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/addon-607454-latest.xpi?src=dp-btn-primary
   become: "{{ user.username }}"
 
-- name: Install NoScript for Firefox
-  shell: firefox https://addons.mozilla.org/firefox/downloads/latest/noscript/addon-722-latest.xpi?src=dp-btn-primary
+# - name: Install NoScript for Firefox, please click into the browser to add and close afterwards !
+#   shell: firefox https://addons.mozilla.org/firefox/downloads/latest/noscript/addon-722-latest.xpi?src=dp-btn-primary
+#   become: "{{ user.username }}"
+
+- name: Install Ghostery for Firefox, please click into the browser to add and close afterwards !
+  shell: "firefox https://addons.mozilla.org/firefox/downloads/latest/ghostery"
   become: "{{ user.username }}"
