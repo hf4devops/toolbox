@@ -4,3 +4,4 @@
     - prepare_dev_config
     - configure_gnome
     - vscode_configure
+    - ansible_configuration

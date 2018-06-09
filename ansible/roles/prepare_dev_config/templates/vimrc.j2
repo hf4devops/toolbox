@@ -40,6 +40,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set splitbelow
 set splitright
+color ron
+set clipboard=unnamedplus
 
 command -nargs=? -bang Buffer if <q-args> != '' | exe 'buffer '.<q-args> | else | ls<bang> | let buffer_nn=input('Which one: ') | if buffer_nn != '' | exe buffer_nn != 0 ? 'buffer '.buffer_nn : 'enew' | endif | endif
 

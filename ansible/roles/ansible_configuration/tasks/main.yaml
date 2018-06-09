@@ -1,0 +1,7 @@
+---
+
+- name: Comment in no .retry files from Ansible runs
+  lineinfile:
+    path: /etc/ansible/ansible.cfg
+    line: "^retry_files_enabled = False$"
+    state: present

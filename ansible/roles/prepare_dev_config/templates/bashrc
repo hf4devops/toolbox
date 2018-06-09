@@ -108,8 +108,8 @@ alias gitp="git push origin master"
 alias vimvim="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/vimrc.j2"
 alias vimbash="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/bashrc"
 alias vimtmux="vim $HOME/development/toolbox/ansible/roles/prepare_dev_config/templates/tmux_conf"
-alias spread="cd ~/development/toolbox/ansible/ && sudo ansible-playbook -i inventory/local spread_configurations.yaml && cd -"
-alias cddev="cd ~/development/toolbox/ansible/"
+alias spread="cd ~/development/toolbox/ansible/ && sudo ansible-playbook -i inventory/hf spread_configurations.yaml && cd -"
+alias cddev="cd ~/development/"
 
 # disable ctrl+s
 stty -ixon
