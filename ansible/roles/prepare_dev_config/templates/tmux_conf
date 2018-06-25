@@ -113,6 +113,8 @@ setw -g window-status-bell-attr bold
 setw -g window-status-bell-fg colour255
 setw -g window-status-bell-bg colour1
 
+set -g set-clipboard on
+bind -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
 
 # The messages
 

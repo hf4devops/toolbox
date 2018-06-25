@@ -1,17 +1,8 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-    "key": "ctrl+y",
-    "command": "workbench.action.terminal.focusAtIndex1"
-    },
-    {
-    "key": "ctrl+y",
-    "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-    "key": "ctrl+shift+[Equal]",
-    "command": "-workbench.action.terminal.toggleTerminal"
-    },
+    { "key": "ctrl+y","command": "workbench.action.terminal.toggleTerminal", "when": "!terminalIsOpen"},
+    { "key": "ctrl+y", "command": "workbench.action.terminal.focus", "when": "!terminalFocus"},
+    { "key": "ctrl+y", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
     {
     "key": "ctrl+w",
     "command": "-workbench.action.closeWindow",

@@ -5,6 +5,7 @@
     - disable_bluetooth
     - install_packages
     - install_chrome
+    - kvm
     - tmux
     - vim
     - prepare_dev_config
