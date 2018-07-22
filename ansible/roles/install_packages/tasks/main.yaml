@@ -19,6 +19,7 @@
     - python3
     - python3-pip
     - python3-venv
+    - libcanberra-gtk-module
     - p7zip-full
     - keepassx
     - sysstat
