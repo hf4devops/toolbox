@@ -16,5 +16,6 @@
   with_items:
     - "emmanuelbeziat.vscode-great-icons"
     - "ms-python.python"
+    - redhat.vscode-yaml
   become_user: "{{ user.username }}"
   become: yes

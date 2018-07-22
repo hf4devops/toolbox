@@ -19,10 +19,3 @@
   file:
     path: "/tmp/vscode.deb"
     state: absent
-
-- name: Install Vscode Plugins
-  shell: "code --install-extension {{ item }}"
-  with_items:
-    - emmanuelbeziat.vscode-great-icons
-    - redhat.vscode-yaml
-    - samuelcolvin.jinjahtml
