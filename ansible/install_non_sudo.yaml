@@ -2,4 +2,4 @@
 - hosts: all
   roles:
     - firefox_plugins
-    - install_pycharm_ce
+    - install_pycharm_pro
