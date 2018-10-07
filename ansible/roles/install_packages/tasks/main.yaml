@@ -27,3 +27,4 @@
     - lm-sensors
     - xsel
     - vlc
+    - awscli

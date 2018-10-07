@@ -6,4 +6,6 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "editor.parameterHints": false,
+  "breadcrumbs.enabled": true,
+  "markdown.preview.breaks": true,
 }
