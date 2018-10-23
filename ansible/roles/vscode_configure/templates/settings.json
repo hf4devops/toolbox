@@ -8,4 +8,5 @@
   "editor.parameterHints": false,
   "breadcrumbs.enabled": true,
   "markdown.preview.breaks": true,
+  "editor.suggest.localityBonus": true,
 }
