@@ -11,6 +11,8 @@ set -g history-limit 10000
 
 # reload ~/.tmux.conf using PREFIX r
 bind r source-file ~/.tmux.conf \; display "reloaded"
+# clear history
+bind-key C-k clear-history
 
 setw -g aggressive-resize on
 set-option -g prefix C-x
