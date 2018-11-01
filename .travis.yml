@@ -16,7 +16,7 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
   # Mock ansible.cfg
   - sudo mkdir -p /etc/ansible
-  - sudo echo "" > /etc/ansible/ansible.cfg
+  - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
 
 script:
   - ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
