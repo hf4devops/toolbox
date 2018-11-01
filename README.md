@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/hf4devops/toolbox.svg?branch=master)](https://travis-ci.org/hf4devops/toolbox)
 
-My personal desktop automation for Ubuntu 18.04
+My personal desktop automation for Ubuntu 18.04.
+Travis build on Ubuntu 16.
 
 It installs and configures all my needed desktop application via Ansible.
 
