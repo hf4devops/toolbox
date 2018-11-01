@@ -10,3 +10,5 @@
     - libvirt-daemon-system 
     - bridge-utils 
     - virt-manager
+  tags:
+    - notravis
