@@ -12,10 +12,11 @@ before_install:
 
 install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then sudo pip install ansible; else sudo pip install ansible==$ANSIBLE_VERSION; fi
-  # Mock ansible.cfg
+  # Mockups
   - sudo mkdir -p /etc/ansible
   - sudo adduser --disabled-password --gecos "" hf
   - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
+  - mkdir -p /home/hf/.config/Code
 
 script:
   - sudo ansible-playbook -i inventory/hf install_development_env.yaml --skip-tags notravis
