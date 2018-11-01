@@ -17,7 +17,7 @@ install:
   - sudo mkdir -p /etc/ansible
   - sudo adduser --disabled-password --gecos "" hf
   - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
-  - sudo mkdir -p /home/hf/.config/Code
+  - sudo mkdir -p /home/hf/.config/Code/User
 
 script:
   - sudo ansible-playbook -i inventory/hf install_development_env.yaml --skip-tags notravis
