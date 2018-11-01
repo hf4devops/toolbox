@@ -1,0 +1,20 @@
+language: python
+python: "2.7"
+
+sudo: required
+dist: xenial
+
+env:
+  - ANSIBLE_VERSION=latest
+  - ANSIBLE_VERSION=2.5.1
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+
+script:
+  - ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
+  - ansible-playbook -i inventory/hf install_development_env.yaml
