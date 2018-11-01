@@ -1,5 +1,7 @@
 # toolbox
 
+[![Build Status](https://travis-ci.org/hf4devops/toolbox.svg?branch=master)](https://travis-ci.org/hf4devops/toolbox)
+
 My personal desktop automation for Ubuntu 18.04
 
 It installs and configures all my needed desktop application via Ansible.
