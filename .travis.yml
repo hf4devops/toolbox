@@ -1,7 +1,7 @@
 language: python
 python: "2.7"
 
-sudo: required
+sudo: enabled
 dist: xenial
 
 env:
@@ -15,9 +15,9 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
   # Mock ansible.cfg
-  - mkdir -p /etc/ansible
-  - echo "" > /etc/ansible/ansible.cfg
+  - sudo mkdir -p /etc/ansible
+  - sudo echo "" > /etc/ansible/ansible.cfg
 
 script:
   - ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
-  - ansible-playbook -i inventory/hf install_development_env.yaml
+  - sudo ansible-playbook -i inventory/hf install_development_env.yaml
