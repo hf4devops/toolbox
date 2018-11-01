@@ -12,8 +12,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+  - sudo apt-get install ansible
   # Mock ansible.cfg
   - sudo mkdir -p /etc/ansible
   - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
