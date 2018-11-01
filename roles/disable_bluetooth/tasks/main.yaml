@@ -5,3 +5,5 @@
     name: bluetooth.service 
     state: stopped
     enabled: no
+  tags:
+    - notravis

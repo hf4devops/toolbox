@@ -18,4 +18,4 @@ install:
   - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
 
 script:
-  - sudo ansible-playbook -i inventory/hf install_development_env.yaml --skip-tags systemd
+  - sudo ansible-playbook -i inventory/hf install_development_env.yaml --skip-tags notravis
