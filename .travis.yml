@@ -14,6 +14,8 @@ before_install:
 install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+  # Mock ansible.cfg
+  - echo "" > /etc/ansible/ansible.cfg
 
 script:
   - ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
