@@ -19,5 +19,5 @@ install:
   - sudo echo "" | sudo tee --append /etc/ansible/ansible.cfg
 
 script:
-  - ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
-  - sudo ansible-playbook -i inventory/hf install_development_env.yaml
+  - /usr/bin/ansible-playbook -i inventory/hf install_development_env.yaml --syntax-check
+  - sudo /usr/bin/ansible-playbook -i inventory/hf install_development_env.yaml
