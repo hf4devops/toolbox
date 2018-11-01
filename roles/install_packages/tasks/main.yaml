@@ -28,4 +28,4 @@
     - xsel
     - vlc
     - awscli
-    - net-utils
+    - net-tools
