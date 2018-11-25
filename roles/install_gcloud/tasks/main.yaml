@@ -1,0 +1,28 @@
+---
+
+- name: Copy deb repo list to apt sources
+  template:
+    src: google-cloud-sdk.list
+    dest: /etc/apt/sources.list.d/google-cloud-sdk.list
+    mode: '0664'
+
+- name: Get cloud repo key
+  get_url:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    dest: /tmp/apt-key.gpg
+
+- name: Add gcloud repo key
+  apt_key:
+    file: /tmp/apt-key.gpg
+    state: present
+
+- name: Cleanup repo key
+  file:
+    state: absent
+    path: /tmp/apt-key.gpg
+
+- name: Install google-cloud-sdk
+  apt:
+    name: google-cloud-sdk
+    state: latest
+    update-cache: yes
