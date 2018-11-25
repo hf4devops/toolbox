@@ -16,3 +16,4 @@
     - vscode_install
     - vscode_configure
     - install_gcloud
+    - install_aws_tools
