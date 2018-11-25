@@ -9,7 +9,6 @@
     name: "{{ item }}"
     state: latest
   with_items:
-    - tmux
     - atop
     - ssh
     - vim
@@ -27,5 +26,4 @@
     - lm-sensors
     - xsel
     - vlc
-    - awscli
     - net-tools

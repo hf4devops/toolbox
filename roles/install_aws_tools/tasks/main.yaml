@@ -1,0 +1,10 @@
+---
+
+- name: install basic packages for daily use
+  apt:
+    name: "{{ packages }}"
+    state: latest
+  vars:
+    packages:
+    - awscli
+    - python3-boto3
