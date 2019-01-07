@@ -9,7 +9,7 @@
 
 - name: Fetch Pycharm 2018.1.4 from direct link
   get_url:
-    url: https://download.jetbrains.com/python/pycharm-professional-2018.2.4.tar.gz
+    url: https://download.jetbrains.com/python/pycharm-professional-2018.3.2.tar.gz
     dest: "{{ user.home_path }}/pycharm/pycharm-professional.tar.gz"
     mode: "0775"
 
