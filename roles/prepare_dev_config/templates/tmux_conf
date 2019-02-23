@@ -15,9 +15,6 @@ bind r source-file ~/.tmux.conf \; display "reloaded"
 bind-key C-k clear-history
 
 setw -g aggressive-resize on
-set-option -g prefix C-x
-unbind-key C-b
-bind-key C-x send-prefix
 
 # Use Alt-arrow keys without prefix key to switch pane
 bind -n M-Left select-pane -L
