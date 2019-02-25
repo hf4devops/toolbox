@@ -3,7 +3,7 @@ python: "2.7"
 
 # The playbook needs sudo rights
 sudo: enabled
-dist: xenial
+dist: trusty
 
 env:
   - ANSIBLE_VERSION=latest
