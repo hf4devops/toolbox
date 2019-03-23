@@ -105,6 +105,7 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push origin master"
 alias ch="expressvpn connect ch"
+alias upgrade="sudo apt update && sudo apt upgrade"
 
 alias vimvim="vim $HOME/development/toolbox/roles/prepare_dev_config/templates/vimrc.j2"
 alias vimbash="vim $HOME/development/toolbox/roles/prepare_dev_config/templates/bashrc"
