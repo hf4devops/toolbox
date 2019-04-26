@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git_user="hf4devops"
-git_email="hf4devops@gmail.com"
+git_email="no@mail.com"
 system_user="hf"
 ansible_exitcode=0
 

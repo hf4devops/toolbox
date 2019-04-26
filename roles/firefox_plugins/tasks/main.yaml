@@ -1,9 +1,7 @@
 ---
 
-# TODO Make idepotent
-
-# - name: Close all Firefox instances
-  # shell: "killall firefox"
+- name: Close all Firefox instances
+  shell: "killall firefox"
 
 - name: Install Ublock for Firefox, please click into the browser to add and close afterwards !
   shell: firefox https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/addon-607454-latest.xpi?src=dp-btn-primary
