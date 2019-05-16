@@ -1,15 +1,15 @@
 #!/bin/bash
 
+# Please change this values
 git_user="hf4devops"
 git_email="no@mail.com"
-system_user="hf"
-ansible_exitcode=0
+system_user="storm"
 
 git config user.name "$git_user"
 git config user.email "$git_email"
 git remote set-url origin git@github.com:$git_user/toolbox
 
-sudo apt install ansible -y
+ansible_exitcode=0
 
 cd ansible
 

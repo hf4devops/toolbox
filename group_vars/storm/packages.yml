@@ -1,0 +1,13 @@
+packages_to_install:
+  - "atop"
+  - "ssh" 
+  - "vim"
+  - "tree"
+  - "curl"
+  - "p7zip-full"
+  - "keepassx"
+  - "sysstat"
+  - "iftop"
+  - "xsel"
+  - "vlc"
+  - "curl"

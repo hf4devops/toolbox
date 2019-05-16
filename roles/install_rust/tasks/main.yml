@@ -1,0 +1,4 @@
+---
+
+- name: Install Rust via curl
+  shell: "curl https://sh.rustup.rs -sSf | sh"

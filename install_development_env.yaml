@@ -1,19 +1,18 @@
 ---
 - hosts: all
   roles:
-    - ansible_configuration
     - disable_bluetooth
     - install_packages
-    - install_chrome
-    - system_preparations
-    - kvm
-    - kubernetes_minikube
-    - tmux
-    - vim
-    - prepare_dev_config
-    - configure_gnome
-    - docker_ce
-    - vscode_install
-    - vscode_configure
-    - install_gcloud
-    - install_aws_tools
+#    - install_chrome
+#    - system_preparations
+#    - kvm
+#    - kubernetes_minikube
+#    - tmux
+#    - vim
+#    - prepare_dev_config
+#    - configure_gnome
+#    - docker_ce
+#    - vscode_install
+#    - vscode_configure
+#    - install_gcloud
+#    - install_aws_tools

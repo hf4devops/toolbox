@@ -1,8 +1,0 @@
----
-
-gnome_desktop_favorites:
-  - firefox.desktop
-  - org.gnome.Nautilus.desktop
-  - code.desktop
-  - google-chrome.desktop
-  - thunderbird.desktop

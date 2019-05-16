@@ -1,0 +1,5 @@
+---
+user:
+  username: storm
+  home_path: /home/storm
+  group: storm
