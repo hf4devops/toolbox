@@ -1,3 +1,10 @@
 ---
 
-- import_tasks: install_docker_ce.yml
+- name: Install docker requirements
+  apt:
+    name: "{{ docker_packages_to_install }}"
+
+- name: Install Docker CE
+  apt:
+    name: docker.io
+    update_cache: yes

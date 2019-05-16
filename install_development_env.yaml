@@ -10,7 +10,7 @@
     - vim
 #    - prepare_dev_config
 #    - configure_gnome
-#    - docker_ce
+    - docker_ce
 #    - vscode_install
 #    - vscode_configure
 #    - install_gcloud
