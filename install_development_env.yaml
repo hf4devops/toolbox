@@ -3,12 +3,11 @@
   roles:
     - disable_bluetooth
     - install_packages
-#    - install_chrome
-#    - system_preparations
-#    - kvm
+    - install_chrome
+    - kvm
 #    - kubernetes_minikube
-#    - tmux
-#    - vim
+    - tmux
+    - vim
 #    - prepare_dev_config
 #    - configure_gnome
 #    - docker_ce
@@ -16,3 +15,4 @@
 #    - vscode_configure
 #    - install_gcloud
 #    - install_aws_tools
+#    - install_rust

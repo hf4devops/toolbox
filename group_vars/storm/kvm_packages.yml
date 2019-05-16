@@ -1,0 +1,7 @@
+---
+kvm_packages_to_install:
+  - qemu-kvm
+  - libvirt-clients
+  - libvirt-daemon-system 
+  - bridge-utils 
+  - virt-manager

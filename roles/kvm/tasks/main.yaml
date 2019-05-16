@@ -2,13 +2,5 @@
 
 - name: Install KVM
   apt:
-    name: "{{ item }}"
+    name: "{{ kvm_packages_to_install }}"
     state: latest
-  with_items:
-    - qemu-kvm
-    - libvirt-clients
-    - libvirt-daemon-system 
-    - bridge-utils 
-    - virt-manager
-  tags:
-    - notravis

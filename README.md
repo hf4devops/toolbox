@@ -1,6 +1,6 @@
 # toolbox
 
-My personal desktop automation for Ubuntu 18.04.
+My personal desktop automation for Ubuntu 19.04 codename Disco.
 
 It installs and configures all my needed desktop application via Ansible.
 
