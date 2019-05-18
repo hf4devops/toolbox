@@ -5,14 +5,13 @@
     - install_packages
     - install_chrome
     - kvm
-#    - kubernetes_minikube
     - tmux
     - vim
-#    - prepare_dev_config
-#    - configure_gnome
+    - prepare_dev_config
     - docker_ce
-#    - vscode_install
-#    - vscode_configure
-#    - install_gcloud
-#    - install_aws_tools
+    - vscode_install
+    - vscode_configure
+    - install_gcloud
+    - install_aws_tools
 #    - install_rust
+#    - configure_gnome
