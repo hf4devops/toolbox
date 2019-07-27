@@ -1,17 +1,17 @@
 ---
 - hosts: all
   roles:
-#    - disable_bluetooth
-#    - install_packages
-#    - install_chrome
-#    - kvm
-#    - tmux
-#    - vim
-#    - prepare_dev_config
-#    - docker_ce
-#    - vscode_install
+    - disable_bluetooth
+    - install_packages
+    - install_chrome
+    - kvm
+    - tmux
+    - vim
+    - prepare_dev_config
+    - docker_ce
+    - vscode_install
     - vscode_configure
-#    - install_gcloud
-#    - install_aws_tools
+    - install_gcloud
+    - install_aws_tools
 #    - install_rust
 #    - configure_gnome
