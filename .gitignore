@@ -1,3 +1,6 @@
 *.retry
 test.yaml
 venv*
+.history/
+.vscode/
+.secrets/
