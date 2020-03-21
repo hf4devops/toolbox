@@ -13,10 +13,7 @@ packages_to_install:
   - "curl"
 
 vscode_plugins:
-  - "emmanuelbeziat.vscode-great-icons"
   - "ms-python.python"
   - redhat.vscode-yaml
-  - atlassian.atlascode
   - xyz.local-history
-  - BazelBuild.vscode-bazel
   - Atishay-Jain.All-Autocomplete

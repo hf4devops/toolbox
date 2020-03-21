@@ -1,7 +1,0 @@
----
-
-- name: disable bluetooth
-  systemd:
-    name: bluetooth.service 
-    state: stopped
-    enabled: no
