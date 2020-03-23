@@ -17,3 +17,6 @@ vscode_plugins:
   - redhat.vscode-yaml
   - xyz.local-history
   - Atishay-Jain.All-Autocomplete
+
+snaps_to_install:
+  - pycharm-community

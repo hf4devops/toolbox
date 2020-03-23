@@ -4,3 +4,8 @@
   apt:
     name: "{{ packages_to_install }}"
     state: latest
+
+- name: install snap packages
+  snap:
+    classic: yes
+    name: "{{ snaps_to_install }}"
