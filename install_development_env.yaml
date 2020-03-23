@@ -1,6 +1,7 @@
 ---
 - hosts: all
   roles:
+    - system_preparation
     - install_packages
     - install_chrome
     - kvm
@@ -12,5 +13,4 @@
     - vscode_configure
     - install_gcloud
     - install_aws_tools
-#    - install_rust
-#    - configure_gnome
+    - install_rust
