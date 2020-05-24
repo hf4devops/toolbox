@@ -1,0 +1,21 @@
+---
+
+- name: Get Minikube
+  get_url: 
+    url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    dest: /tmp/minikube
+    mode: '0640'
+
+- name: Create usr/local/bin
+  file: 
+    path: /usr/local/bin/
+    state: directory
+    recurse: yes
+
+- name: Install Minikube
+  shell: install /tmp/minikube /usr/local/bin
+
+- name: Cleanup Minikube Download
+  file:
+    state: absent
+    path: /tmp/minikube

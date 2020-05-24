@@ -12,10 +12,6 @@ HISTCONTROL=ignoredups:ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -98,20 +94,10 @@ fi
 HISTSIZE=""
 HISTFILESIZE=""
 HISTTIMEFORMAT="%d/%m/%y %T "
-#source <(kubectl completion bash)
 
-alias gits="git status"
-alias gita="git add"
-alias gitc="git commit"
-alias gitp="git push origin master"
+source <(kubectl completion bash)
 alias ch="expressvpn connect ch"
-alias upgrade="sudo apt update && sudo apt upgrade"
 
-alias vimvim="vim $HOME/development/toolbox/roles/prepare_dev_config/templates/vimrc.j2"
-alias vimbash="vim $HOME/development/toolbox/roles/prepare_dev_config/templates/bashrc"
-alias vimtmux="vim $HOME/development/toolbox/roles/prepare_dev_config/templates/tmux_conf"
-alias spread="cd ~/development/toolbox/ && sudo ansible-playbook -i inventory/hf spread_configurations.yaml && cd -"
-alias cddev="cd ~/development/"
 
 # disable ctrl+s
 stty -ixon

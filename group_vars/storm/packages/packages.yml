@@ -14,9 +14,9 @@ packages_to_install:
 
 vscode_plugins:
   - "ms-python.python"
-  - redhat.vscode-yaml
   - xyz.local-history
   - Atishay-Jain.All-Autocomplete
 
 snaps_to_install:
   - pycharm-community
+  - kubectl
